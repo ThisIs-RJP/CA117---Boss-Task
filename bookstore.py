@@ -29,7 +29,7 @@ class Collection(object):
     def __str__(self):
         output = []
 
-        output.append("Collection - {}".format(self.name))
+        output.append("".format(self.name))
         for book in self.collection:
             output.append(str(book))
         
@@ -66,6 +66,6 @@ class BookStore(object):
         output = []
 
         for k, v in self.collections.items():
-            output.append("Collection name: {} {}".format(k, str(v)))
+            output.append("Collection name: {} {}\n".format(k, str(v)))
         
         return "\n".join(output)
