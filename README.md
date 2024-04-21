@@ -26,7 +26,7 @@ This is a class that stores 2 things
 	- This means that you have to store all the books that EXISTS in the store in this dictionary. You should store it in such a way that the dictionary keeps track of the quantities of each copy.
 		Example:
 		If you have 2 copies of the book "Death Note", the dictionary should store the number of copies of "Death Note", in this case it's 2.
-- A list of all the collections in the book store. ***Decide if whether or not this list contains the collection object or the collection name!*** Although the solution I have in mind doesn't involve dictionaries, you may solve this problem using a dictionary.
+- A way to store all of  the collections in the book store. ***Decide if whether or not this list contains the collection object or the collection name!***
 - An ```assignCollection(b, c)``` function, where ```b``` is the Book object being added and ```c``` is the collection. If the collection ***already*** exists in bookstore, then the book should just be added to that collection. Otherwise, add the collection to **Note that both book and collection are already created before hand**
 	```
 	c1 = Collection("Manga")
@@ -43,6 +43,8 @@ This is a class that stores 2 things
 2. Create a function that removes a book from a collection in BookStore. ***Important! The book was REMOVED from the collection but ISN'T removed from the overall bookstore stock!***
 
 # Sample code
+
+### Sample 1
 *main.py*
 ```
 #!/usr/bin/env python
@@ -61,4 +63,42 @@ Expected Output:
 Name: Oregairu
 Author: Wataru Watari
 Year: 2011
-``
+```
+
+### Sample 2
+```
+#!/usr/bin/env python
+
+### Necessary
+from bookstore import *
+
+### Creating a book
+
+b1 = Book("Oregairu", "Wataru Watari", 2011)
+b2 = Book("Death Note", "Tsugumi Ohba", 2003)
+
+### Creating a collection 
+c = Collection("Manga")
+
+bookstore = BookStore()
+### Assigning our books to the collection manga
+bookstore.assignCollection(b1, c)
+bookstore.assignCollection(b2, c)
+
+print(bookstore.getBooks())
+print()
+```
+
+Expected output
+```
+Book name: Oregairu 1x
+Book name: Death Note 1x
+
+Collection name: Manga Collection - Manga
+Name: Oregairu
+Author: Wataru Watari
+Year: 2011
+Name: Death Note
+Author: Tsugumi Ohba
+Year: 2003
+```

@@ -6,5 +6,16 @@ from bookstore import *
 ### Creating a book
 
 b1 = Book("Oregairu", "Wataru Watari", 2011)
+b2 = Book("Death Note", "Tsugumi Ohba", 2003)
 
-print(b1)
+### Creating a collection 
+c = Collection("Manga")
+
+bookstore = BookStore()
+### Assigning our books to the collection manga
+bookstore.assignCollection(b1, c)
+bookstore.assignCollection(b2, c)
+
+print(bookstore.getBooks())
+print()
+print(bookstore.getCollections())
