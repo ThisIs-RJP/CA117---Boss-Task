@@ -41,3 +41,24 @@ This is a class that stores 2 things
 
 1. Create a function in BookStore that returns the list of the collection names, as well as the number of books in that collection
 2. Create a function that removes a book from a collection in BookStore. ***Important! The book was REMOVED from the collection but ISN'T removed from the overall bookstore stock!***
+
+# Sample code
+*main.py*
+```
+#!/usr/bin/env python
+
+### Necessary
+from bookstore import *
+
+### Creating a book
+
+b1 = Book("Oregairu", "Wataru Watari", 2011)
+
+print(b1)
+```
+Expected Output:
+```
+Name: Oregairu
+Author: Wataru Watari
+Year: 2011
+``
