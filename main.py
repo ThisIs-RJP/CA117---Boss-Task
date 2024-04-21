@@ -15,7 +15,11 @@ bookstore = BookStore()
 ### Assigning our books to the collection manga
 bookstore.assignCollection(b1, c)
 bookstore.assignCollection(b2, c)
+bookstore.assignCollection(b2, c)
 
+print("Printing all the books in our Book store and their quantities")
 print(bookstore.getBooks())
-print()
-print(bookstore.getCollections())
+# print("Printing the contents of our collections")
+# print(bookstore.getCollections())
+# print("\nPrinting the collection we have built")
+# print(c)

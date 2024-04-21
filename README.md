@@ -85,21 +85,15 @@ bookstore = BookStore()
 ### Assigning our books to the collection manga
 bookstore.assignCollection(b1, c)
 bookstore.assignCollection(b2, c)
+bookstore.assignCollection(b2, c)
 
+print("Printing all the books in our Book store and their quantities")
 print(bookstore.getBooks())
-print()
 ```
 
 Expected output
 ```
+Printing all the books in our Book store and their quantities
 Book name: Oregairu 1x
-Book name: Death Note 1x
-
-Collection name: Manga Collection - Manga
-Name: Oregairu
-Author: Wataru Watari
-Year: 2011
-Name: Death Note
-Author: Tsugumi Ohba
-Year: 2003
+Book name: Death Note 2x
 ```
